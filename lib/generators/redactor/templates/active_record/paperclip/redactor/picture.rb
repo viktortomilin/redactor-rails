@@ -4,7 +4,7 @@ class RedactorRails::Picture < RedactorRails::Asset
                     path: ":rails_root/public/redactor_rails/pictures/:id/:style_:basename.:extension",
                     styles: { content: '800>', thumb: '118x100#' }
 
-  validates_attachment_size :data, less_than: 2.megabytes
+  validates_attachment_size :data, less_than: 10.megabytes
   validates_attachment_presence :data
 
   def url_content
